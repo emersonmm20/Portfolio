@@ -1,0 +1,254 @@
+:root{
+    --primary:#191A19;
+    --secondary:#1E5128;
+    --tertary:#4E9F3D;
+    --complementary:#D8E9A8;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: var(--complementary);
+    overflow-x: hidden;
+}
+header{
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+}
+nav, nav ul{
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+a{
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--complementary);
+    background-color: var(--secondary);
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    transition: .5s;
+    margin: 0 5px;
+}
+a:hover{
+    cursor: pointer;
+    background-color: var(--tertary);
+    color: #000;
+    transition: .5s;
+
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-left: 150vw;
+    transition: .5s;
+}
+
+/* --------------------------------------------main */
+#main{
+    margin-left: 0;
+}
+#main div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: end;
+}
+
+#main hr{
+    width: 75%;
+}
+#main img{
+    width: 50%;
+    border-radius: 50%;
+}
+#main p, #main h1,#main hr{
+    margin: 5px 0;
+}
+
+/* --------------------------------------------Projects */
+
+
+#projects{
+    align-items: center;
+    
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 5px;
+    width: 33.33%;
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+}
+.project h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.project .img{
+    width: 100%;
+    border-radius: 10px;
+    transition: .5s
+}
+.project .img:hover{
+    transform: scale(1.2);
+    transition: .5s
+}
+.project .ico{
+    height: 24px;
+}
+.project a{
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary);
+}
+.project-tec-text{
+    margin-top: 10px;
+}
+.project button{
+    margin-top: 10px;
+    background-color: var(--tertary);
+    padding: 5px 15px;
+    border: none;
+    margin:auto;
+    color: #fff;
+    border-radius: 10px;
+    transition: .5s;
+}
+.project button:hover{
+    cursor: pointer;
+    
+    background-color: var(--complementary);
+    color: #000;
+    transition: .5s;
+}
+
+
+
+
+
+
+/* BLACK SCREEN-------------------------------- */
+#black-screen{
+    z-index: 15;
+    margin-left: 0;
+    display: none;
+    opacity: 0;
+    background-color: #00000010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+#black-screen .content{
+    width: 75%;
+    height: 85%;
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+#black-screen .content .extend-project {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#black-screen .content .extend-project div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+
+}
+#black-screen .content .img-project{
+    width: 90%;
+    border-radius: 10px;
+    transition: .5s;
+
+}
+#black-screen .content img:hover{
+    transform: scale(1.1);
+    transition: .5s;
+    
+}
+.content-project hr{
+    width: 75%;
+}
+.content-project div, .content-project h3, .content-project hr,.content-project p{
+    margin-bottom: 20px;
+} 
+#black-screen .content-project, .content-project div{
+    flex-direction: column;
+
+}
+#black-screen ul{
+    list-style: none;
+}
+
+#black-screen ul li{
+    text-decoration: none;
+    background-color: var(--tertary);
+    border-radius: 10px;
+    transition: .5s;
+    padding: 10px;
+}
+#black-screen ul li:hover{
+    transition: .5s;
+    background-color: var(--complementary);
+    color: #000;
+    cursor: pointer;
+}
+#black-screen a{
+    background-color: var(--tertary);
+}
+#black-screen a:hover{
+    background-color: var(--complementary);
+}
+.git-img{
+    width: 25px;
+}
+
+
+
+.tec-list{
+
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+}
+.tech-in-project{
+    text-align: center;
+    width: 40%;
+}
