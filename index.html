@@ -10,11 +10,11 @@
     <header>
         <nav>
             <ul>
-                <li class="nav-li"><a href="#" class="nav-a">Main</a></li>
-                <li class="nav-li"><a href="#" class="nav-a">Projects</a></li>
-                <li class="nav-li"><a href="#" class="nav-a">Technologies</a></li>
-                <li class="nav-li"><a href="#" class="nav-a">About</a></li>
-                <li class="nav-li"><a href="#" class="nav-a">Contact</a></li>
+                <li class="nav-li"><a value="main"  class="nav-a">Main</a></li>
+                <li class="nav-li"><a value="projects"  class="nav-a">Projects</a></li>
+                <li class="nav-li"><a value="technologies"  class="nav-a">Technologies</a></li>
+                <li class="nav-li"><a value="about"   class="nav-a">About</a></li>
+                <li class="nav-li"><a value="contact"  class="nav-a">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,32 +29,12 @@
         </div>
     </section>
     <section id="projects" class="section">
+        <h2>Projects</h2>
         
     </section>
     <section id="technologies" class="section">
         <h2>technologies</h2>
-        <!-- html5,css,javascript,react,git/github -->
          <div class="tech-container">
-            <div class="tech">
-                <img src="img/tec/html.png" alt="Html">
-                <p>HTML</p>
-            </div>
-            <div class="tech">
-                <img src="img/tec/html.png" alt="Html">
-                <p>CSS</p>
-            </div>
-            <div class="tech">
-                <img src="img/tec/html.png" alt="Html">
-                <p>javascript</p>
-            </div>
-            <div class="tech">
-                <img src="img/tec/html.png" alt="Html">
-                <p>React</p>
-            </div>
-            <div class="tech">
-                <img src="img/tec/html.png" alt="Html">
-                <p>Git/Github</p>
-            </div>
          </div>
     </section>
     <section id="about" class="section">
@@ -63,30 +43,23 @@
 
     </section>
     <section id="contact" class="section">
-        <form action=""></form>
+        <form action="/enviar" method="POST">
+            <h2>Contact</h2>
+            <label for="name">Name:</label><br>
+            <input type="text" autocomplete="off" id="name" name="name"  placeholder="name" required><br><br>
+    
+            <label for="email">Email:</label><br>
+            <input type="email" autocomplete="off" id="email" name="email"  placeholder="example@example.com" required><br><br>
+    
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" placeholder="Message:" required></textarea><br><br>
+    
+            <button type="submit">Submit</button>
+        </form>
     </section>
     <section id="black-screen">
         <div class="content" id="content">
-            <!-- <div class="extend-project">
-                <div class="img-extend-project">
-                    <img class="img-project" src="img/imgRenataApp.jpg" alt="" srcset="">
-                </div>
-                <div class="content-project">
-                    <h3>RenataApp</h3>
-                    <hr>
-                    <div>
-                        <p>Renata App is a versatile and user-friendly application designed to help you stay organized and productive. It provides a set of essential tools to streamline your daily tasks and calculations.</p>
-                        <p>Technologies used in this project:</p>
-                        <ul>
-                            <li>React</li>
-                        </ul>
-                        <a href="#"><img class="git-img"src="img/github-mark.png" alt="">Visit Github project</a>
-                    </div>
-                    
-                </div>
-            </div> -->
         </div>
-
     </section>
 
 

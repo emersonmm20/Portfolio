@@ -10,16 +10,24 @@ const projects=document.createElement("DIV")
 
 class technology {
     //name, src="img" , status (Learn true or false "learning")
-    constructor(name,img,status) {
+    constructor(name,img) {
         this.name=name
         this.img=img
-        this.status=status
-
         
-
-        
+        this.html=`<div class="tech">
+                <img src="img/${img}" alt="">
+                <h3>${name}</h3>
+            </div>`
     }
 }
+const tecHTML=new technology("HTML","html-5.png")
+const css=new technology("CSS","css-3.png")
+const javascript= new technology("JavaScript","js.png")
+const react=new technology("React","react.png")
+const git= new technology("GIT/GitHub","github-mark.png")
+const nodeJS=new technology("Node.JS","nodejs.png")
+
+const technologies=[tecHTML,css,javascript,react,git]
 
 class project {
     // Name, description, img, git URL and (ARRAY)technologies
@@ -87,7 +95,8 @@ const showSection=(selected)=>{
 
 navButtons.forEach(button =>{
     button.addEventListener("click",()=>{
-        showSection(button.innerHTML.toLowerCase())
+        console.log(button.getAttribute("value"))
+        showSection(button.getAttribute("value"))
     })
 })
 
@@ -100,7 +109,7 @@ const renderProjects=(list)=>{
     list.forEach(element =>{
         allOfList+= element.htmlSmall
     })
-    projectsContainer.innerHTML=allOfList
+    projectsContainer.innerHTML+=allOfList
 
 }
 
@@ -142,6 +151,20 @@ const closeBlackScreen=()=>{
     blackScreen.style.opacity="0"
     setTimeout(()=>blackScreen.style.display="none",500)
 }
+
+const addtechnologies=(arr)=>{
+    let content=""
+
+    arr.forEach(tech=>{
+        content+=tech.html
+    
+    })
+    document.querySelector(".tech-container").innerHTML=content
+
+
+}
+
+addtechnologies(technologies)
 
 blackScreen.addEventListener("click", closeBlackScreen)
 blackScreenContent.addEventListener("click",(e)=>e.stopPropagation())
