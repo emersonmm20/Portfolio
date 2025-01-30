@@ -68,6 +68,7 @@ class project {
                         <p>Technologies used in this project:</p>
                         ${processTechnologies(technologies)}
                         <a href="${git}" target="_blank"><img class="git-img"src="img/github-mark.png">Visit Github project</a>
+                        <button id="close-extend-button">X</button>
                     </div>
                 </div>
             </div>`
@@ -167,4 +168,23 @@ const addtechnologies=(arr)=>{
 addtechnologies(technologies)
 
 blackScreen.addEventListener("click", closeBlackScreen)
+document.getElementById("close-extend-button").addEventListener("click",closeBlackScreen)
 blackScreenContent.addEventListener("click",(e)=>e.stopPropagation())
+
+const evaluateWidthBody=()=>{
+    if(window.innerWidth<=900){
+        sections.forEach(section =>{
+            section.setAttribute("style", "margin-left:0");
+        })
+    }
+    else {
+        sections.forEach(section =>{
+            section.setAttribute("style", "opacity:0")
+            section.setAttribute("style", "margin-left:150vw");
+        })
+        sections[0].setAttribute("style","margin-left:0")
+
+    }
+}
+
+window.addEventListener("resize",evaluateWidthBody)

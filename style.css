@@ -4,6 +4,21 @@
     --tertary:#4E9F3D;
     --complementary:#D8E9A8;
 }
+
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: none;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--tertary);    
+    border-radius: 20px;     
+  }
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -87,6 +102,7 @@ section{
     width: 50%;
     border-radius: 50%;
     transition: .5s;
+    
 }
 
 #main p, #main h1,#main hr{
@@ -191,8 +207,6 @@ section{
     align-items: center;
     justify-content: center;
 
-    flex: 1;
-
 }
 #black-screen .content .img-project{
     width: 90%;
@@ -266,7 +280,7 @@ section{
 }
 .tech-container {
     /* background-color: cyan; */
-    height: 50vh;
+    /* height: 50vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -304,7 +318,7 @@ form {
     width: 60vw;
     box-shadow: 0px 0px 40px 20px var(--complementary)
 }
-form input, form textarea, form button, form label{
+form input, form textarea, form label{
     width: 75%;
     margin: auto;
     border:none;
@@ -338,7 +352,7 @@ form textarea{
     border: 1px solid var(--complementary);
 }
 form input:focus,form textarea:focus{
-    background-color: #00000050;
+    background-color: #0000001b;
     transition: .5s;
     outline: none;
     border-radius: 10px;
@@ -350,7 +364,7 @@ form input::placeholder{
 }
 
 
-form button{
+form input[type="submit"]{
     background-color: var(--primary);
     color: var(--complementary);
     padding: 10px 0;
@@ -358,7 +372,7 @@ form button{
     transition: .5s;
 }
 
-form button:hover{
+form input[type="submit"]:hover{
     background-color: var(--complementary);
     color : var(--primary);
     cursor: pointer;
@@ -383,6 +397,9 @@ form button:hover{
     .project .img:hover{
         transform: scale(1.2);
         transition: .5s
+    }
+    #close-extend-button{
+        display: none;
     }
     
 }
@@ -409,10 +426,16 @@ form button:hover{
     #main div{
         height: auto;
         text-align: center;
+        text-align: center;
+    }
+    #main p{
+        text-align: center;
+        
     }
     #main img{
         width: 50vw;
         box-shadow: 0px 0px 44px 5px var(--complementary),0px 0px 44px 20px var(--tertary);
+        max-width: 300px;
     }
     .main-text{
         margin-top: 10px;
@@ -445,5 +468,34 @@ form button:hover{
         top: 0;
         left: 0;
     }
+    #black-screen .content{
+        width: 100%;
+        height: 100%;
+
+    }
+    .extend-project{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .img-extend-project{
+        display: none;
+        
+    }
+    #close-extend-button{
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        padding: 15px;
+        background-color: darkred;
+        color: white;
+        border: none;
+        border-radius: 10px;
+
+    }
+    #technologies{
+        padding-bottom: 100px;
+    }
+
     
 }
